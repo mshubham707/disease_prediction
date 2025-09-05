@@ -165,3 +165,13 @@ For questions, contact \mshubham707@gmail.com.
 ## Acknowledgments
 
 Built for a hackathon to demonstrate end-to-end ML pipeline skills, from preprocessing to deployment, as part of **PW Skills Data Analytics certification**.
+---
+title: Disease Prediction
+emoji: 💻
+colorFrom: purple
+colorTo: pink
+sdk: docker
+pinned: false
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
