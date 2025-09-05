@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Disease Prediction Tool</h1>
+        <p>Enter your symptoms to predict potential diseases</p>
+    </header>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="symptomSearch" placeholder="Search symptoms (e.g., Itching)..." onkeyup="filterSymptoms()">
+        </div>
+        <form action="{{ url_for('predict') }}" method="POST" id="symptomForm">
+            <div class="symptoms-grid" id="symptomsGrid">
+                {% for symptom in symptoms %}
+                    <label class="symptom-label">
+                        <input type="checkbox" name="{{ symptom }}" value="{{ symptom }}">
+                        {{ symptom.replace('_', ' ').title() }}
+                    </label>
+                {% endfor %}
+            </div>
+            <button type="submit">Predict Disease</button>
+        </form>
+    </div>
+    <script>
+        function filterSymptoms() {
+            const input = document.getElementById('symptomSearch').value.toLowerCase();
+            const labels = document.getElementsByClassName('symptom-label');
+            for (let label of labels) {
+                const text = label.textContent.toLowerCase();
+                label.style.display = text.includes(input) ? 'block' : 'none';
+            }
+        }
+    </script>
+</body>
+</html>

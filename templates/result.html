@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Prediction Result</h1>
+        <p>Your disease prediction based on selected symptoms</p>
+    </header>
+    <div class="container">
+        <div class="result-card">
+            <h2>Predicted Disease</h2>
+            <p><strong>{{ disease }}</strong></p>
+            <p><strong>Confidence:</strong> {{ confidence }}%</p>
+            <h3>Selected Symptoms</h3>
+            <ul>
+                {% for symptom in selected_symptoms %}
+                    <li>{{ symptom.replace('_', ' ').title() }}</li>
+                {% endfor %}
+            </ul>
+            <a href="{{ url_for('index') }}" class="back-button">Back to Symptom Selection</a>
+        </div>
+    </div>
+</body>
+</html>

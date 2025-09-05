@@ -1,0 +1,42 @@
+Disease,Top_1_Symptom,Top_2_Symptom,Top_3_Symptom
+(vertigo) Paroymsal  Positional Vertigo,vomiting,headache,nausea
+AIDS,high_fever,muscle_wasting,patches_in_throat
+Acne,skin_rash,pus_filled_pimples,blackheads
+Alcoholic hepatitis,vomiting,yellowish_skin,abdominal_pain
+Allergy,continuous_sneezing,shivering,chills
+Arthritis,muscle_weakness,stiff_neck,swelling_joints
+Bronchial Asthma,high_fever,breathlessness,family_history
+Cervical spondylosis,neck_pain,dizziness,loss_of_balance
+Chicken pox,malaise,red_spots_over_body,itching
+Chronic cholestasis,itching,vomiting,yellowish_skin
+Common Cold,phlegm,throat_irritation,redness_of_eyes
+Dengue,headache,nausea,loss_of_appetite
+Diabetes ,increased_appetite,polyuria,fatigue
+Dimorphic hemmorhoids(piles),constipation,pain_during_bowel_movements,pain_in_anal_region
+Drug Reaction,itching,skin_rash,stomach_pain
+Fungal infection,itching,skin_rash,nodal_skin_eruptions
+GERD,stomach_pain,cough,chest_pain
+Gastroenteritis,diarrhoea,vomiting,sunken_eyes
+Heart attack,chest_pain,vomiting,breathlessness
+Hepatitis B,yellowing_of_eyes,malaise,receiving_blood_transfusion
+Hepatitis C,fatigue,yellowish_skin,nausea
+Hepatitis D,joint_pain,vomiting,fatigue
+Hepatitis E,loss_of_appetite,abdominal_pain,yellowing_of_eyes
+Hypertension ,loss_of_balance,lack_of_concentration,headache
+Hyperthyroidism,muscle_weakness,irritability,abnormal_menstruation
+Hypoglycemia,excessive_hunger,slurred_speech,irritability
+Hypothyroidism,enlarged_thyroid,brittle_nails,swollen_extremeties
+Impetigo,skin_rash,blister,red_sore_around_nose
+Jaundice,itching,vomiting,fatigue
+Malaria,muscle_pain,chills,vomiting
+Migraine,acidity,indigestion,headache
+Osteoarthristis,joint_pain,neck_pain,knee_pain
+Paralysis (brain hemorrhage),altered_sensorium,vomiting,headache
+Peptic ulcer diseae,vomiting,abdominal_pain,passage_of_gases
+Pneumonia,chest_pain,fast_heart_rate,rusty_sputum
+Psoriasis,skin_rash,joint_pain,skin_peeling
+Tuberculosis,loss_of_appetite,mild_fever,yellowing_of_eyes
+Typhoid,chills,fatigue,high_fever
+Urinary tract infection,bladder_discomfort,continuous_feel_of_urine,burning_micturition
+Varicose veins,fatigue,cramps,bruising
+hepatitis A,mild_fever,yellowing_of_eyes,muscle_pain
