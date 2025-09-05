@@ -1,5 +1,14 @@
 
-
+---
+title: Disease Prediction
+emoji: 🩺
+colorFrom: blue
+colorTo: indigo
+sdk: docker   # since you're using Docker, not Gradio/Streamlit
+app_file: src/app.py
+pinned: false
+license: mit
+---
 
 # Disease Prediction Project
 
