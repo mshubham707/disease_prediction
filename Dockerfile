@@ -8,7 +8,8 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip \
+ && pip install --no-cache-dir -r requirements.tx
 
 # Expose port 7860 (HF default)
 EXPOSE 7860

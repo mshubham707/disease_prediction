@@ -1,12 +1,9 @@
+flask
 pandas
 numpy
-scikit-learn==1.7.1
-matplotlib
-seaborn
-flask
-joblib
-notebook
-ipykernel
+scikit-learn==1.5.1
 xgboost
 statsmodels
-gunicorn
+matplotlib
+seaborn
+joblib
