@@ -1,6 +1,6 @@
 
 
-````markdown
+
 # Disease Prediction Project
 
 ## Overview
@@ -18,10 +18,11 @@ This project is a machine learning-based web application for predicting diseases
 
 ## Prerequisites
 - Python 3.8+
-- Virtual environment (recommended):  
+- Virtual environment (recommended):
+   
   ```bash
   python -m venv dp_env
-````
+
 
 * Dependencies (in `requirements.txt`):
 
