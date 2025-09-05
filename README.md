@@ -1,72 +1,60 @@
-
 ---
 title: Disease Prediction
 emoji: 🩺
 colorFrom: blue
 colorTo: indigo
-sdk: docker   # since you're using Docker, not Gradio/Streamlit
+sdk: docker   # using Docker, not Gradio/Streamlit
 app_file: src/app.py
-pinned: false
+pinned: true
 license: mit
 ---
 
-# Disease Prediction Project
+# 🩺 Disease Prediction Project
 
-## Overview
-This project is a machine learning-based web application for predicting diseases from user-input symptoms. Built for a hackathon, it uses a dataset of 42 diseases with ~120 samples each, reduced to ~40-50 features via Variance Inflation Factor (VIF) to address multicollinearity. Four models (LogisticRegression, RandomForest, GradientBoosting, XGBoost) are tuned, achieving >97% accuracy, with the best model deployed in a Flask web app. The app features a modern, healthcare-themed UI with a search bar for easy symptom selection, making it user-friendly for early disease diagnosis.
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20App-blue)](https://huggingface.co/spaces/shubzz13/disease-prediction)
 
-## Features
-- **Data Preprocessing**: VIF-based feature reduction (threshold=5) to remove multicollinearity, producing `train_processed.csv` and `test_processed.csv`.
-- **Model Training**: GridSearchCV tunes four models, selecting the best (e.g., Logistic Regression) with >97% accuracy on 42-class classification.
-- **Web App**: Flask app with a responsive UI, including:
-  - Symptom selection form (~40–50 checkboxes).
-  - Real-time symptom search bar (JavaScript).
-  - Modern healthcare-themed design (blue/white palette, rounded elements).
-  - Predictions with confidence scores (e.g., “Fungal infection, 95.23%”).
-- **Deployment**: Hosted on Render for live access.
+## 📌 Overview
+This project is a **machine learning-based web application** for predicting diseases from user-input symptoms.  
 
-## Prerequisites
-- Python 3.8+
-- Virtual environment (recommended):
-   
-  ```bash
-  python -m venv dp_env
+* Dependencies (see `requirements.txt`):
 
+```txt
+pandas
+numpy
+scikit-learn
+xgboost
+statsmodels
+flask
+joblib
+matplotlib
+seaborn
+```
 
-* Dependencies (in `requirements.txt`):
+---
 
-  ```
-  pandas
-  numpy
-  scikit-learn
-  xgboost
-  statsmodels
-  flask
-  ```
+## ⚡ Setup (Local Development)
 
-## Setup
-
-1. **Clone the Repository**:
+1. **Clone the Repository**
 
    ```bash
    git clone https://github.com/your-username/disease-prediction.git
    cd disease-prediction
    ```
 
-2. **Set Up Virtual Environment (optional)**:
+2. **Set Up Virtual Environment (optional)**
 
    ```bash
    python -m venv dp_env
    .\dp_env\Scripts\activate  # Windows
    ```
 
-3. **Install Dependencies**:
+3. **Install Dependencies**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Directory Structure**:
+4. **Directory Structure**
 
    ```
    project_root/
@@ -83,11 +71,11 @@ This project is a machine learning-based web application for predicting diseases
    ├── README.md
    ```
 
-## Usage
+---
+
+## 🚀 Usage
 
 ### Preprocess Data
-
-Run `preprocess.py` to encode prognosis and reduce features via VIF:
 
 ```bash
 python src/data/preprocess.py
@@ -101,8 +89,6 @@ python src/data/preprocess.py
 
 ### Train Model
 
-Run `train.py` to tune models and save the best:
-
 ```bash
 python src/models/train.py
 ```
@@ -113,8 +99,6 @@ python src/models/train.py
 
 ### Generate Predictions
 
-Run `predict.py` for test set predictions:
-
 ```bash
 python src/models/predict.py
 ```
@@ -123,64 +107,67 @@ python src/models/predict.py
 
 * `predictions/predictions.csv` (42 rows, prognosis\_encoded, prognosis)
 
-### Run Flask App
-
-Start the web app:
+### Run Flask App (Locally)
 
 ```bash
 python src/app.py
 ```
 
-**Access**: [http://127.0.0.1:5000](http://127.0.0.1:5000)
-**Features**: Select symptoms, use search bar, view predictions with confidence.
+Open: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
-## Deployment
+---
 
-* **Live URL**: \[Your Render URL, e.g., [https://disease-prediction.onrender.com](https://disease-prediction.onrender.com)]
+## 🌍 Deployment
 
-**Steps**:
+The app is live on **Hugging Face Spaces**:
+👉 [https://huggingface.co/spaces/shubzz13/disease-prediction](https://huggingface.co/spaces/shubzz13/disease-prediction)
 
-1. Push to GitHub:
+Deployment steps:
+
+1. Create a Hugging Face Space with **Docker SDK**.
+2. Push your repo:
 
    ```bash
-   git push origin main
+   git push hf main
    ```
-2. Create a Web Service on Render (free tier).
-3. Settings:
+3. Hugging Face automatically builds & hosts the app.
 
-   * Runtime: Python
-   * Build Command: `pip install -r requirements.txt`
-   * Start Command: `python src/app.py`
-
-Deploy and access the URL.
-
-## Results
-
-* **Data**: Reduced from 132 to \~40–50 features via VIF (threshold=5), handling multicollinearity.
-* **Models**: Best model (Logistic Regression) achieves >97% accuracy on validation and test sets (42 classes, balanced).
-* **UI**: Modern Flask app with search bar, responsive symptom grid, and healthcare-themed design (blue/white palette).
-* **Output**: `predictions.csv` with accurate disease predictions for test set (42 rows).
-
-## Notebooks
-
-* `data_preparation.ipynb`: Data cleaning and initial preprocessing.
-* `exploratory_data_analysis.ipynb`: Visualizations and VIF analysis.
-* `model_training.ipynb`: Model tuning and evaluation.
-
-## Contact
-
-For questions, contact \mshubham707@gmail.com.
-
-## Acknowledgments
-
-Built for a hackathon to demonstrate end-to-end ML pipeline skills, from preprocessing to deployment, as part of **PW Skills Data Analytics certification**.
----
-title: Disease Prediction
-emoji: 💻
-colorFrom: purple
-colorTo: pink
-sdk: docker
-pinned: false
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+## 📊 Results
+
+* **Data**: Reduced from 132 to \~40–50 features via VIF (threshold=5).
+* **Models**: Logistic Regression achieves **>97% accuracy** on validation & test sets.
+* **UI**: Modern Flask app with responsive grid + symptom search.
+* **Outputs**: Accurate `predictions.csv` for 42 diseases.
+
+---
+
+## 📓 Notebooks
+
+* `data_preparation.ipynb` → Data cleaning and preprocessing.
+* `exploratory_data_analysis.ipynb` → Visualizations + VIF analysis.
+* `model_training.ipynb` → Model tuning & evaluation.
+
+---
+
+## 📸 Demo
+
+![alt text](image.png)
+![alt text](image-1.png)
+
+---
+
+## 📬 Contact
+
+* 📧 Email: [mshubham707@gmail.com](mailto:mshubham707@gmail.com)
+* 💻 GitHub: [mshubham707](https://github.com/mshubham707)
+
+---
+
+## 🙏 Acknowledgments
+
+Built for a **hackathon** to demonstrate an end-to-end ML pipeline, from preprocessing to deployment.
+Part of the **PW Skills Data Analytics Certification**.
+
+```
